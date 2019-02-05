@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #circle {
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            border-radius: 50%;
+            display: inline-block;
+            padding: 25px;
+            margin: 25px;
+            text-align: center;
+            line-height: 140px;
+        }
+
+        #square {
+
+
+            width: 100px;
+            height: 100px;
+
+            padding: 25px;
+            margin: 25px;
+            background-color: green;
+            text-align: center;
+            line-height: 80px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="square"></div>
+    <div id="circle"></div>
+
+    <script>
+        let squareURL = `http://helf-kea.dk/test/frog.png`
+        let circleURL = `http://helf-kea.dk/test/gris.png`
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            console.log("start");
+
+            let square = document.querySelector("#square");
+            let circle = document.querySelector("#circle");
+
+            square.innerHTML = `<img src= "${squareURL}">`;
+            circle.innerHTML = `<img src= "${circleURL}">`;
+
+            square.addEventListener("click", flyt);
+            circle.addEventListener("click", stop);
+
+            function flyt() {
+                let sqaureStart = square.innerHTML;
+
+                square.innerHTML = circle.innerHTML;
+                circle.innerHTML = sqaureStart;
+            }
+
+            function stop() {
+                square.removeEventListener("click", flyt);
+
+            }
+        }
+    </script>
+</body>
+
+</html>
