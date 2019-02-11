@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    .boks {
+        height: 20px;
+        border: 1px solid #000;
+        margin: 10px;
+    }
+</style>
+
+<body>
+
+
+    <div class="boks"></div>
+    <div class="boks"></div>
+    <div class="boks"></div>
+    <div class="boks"></div>
+    <div class="boks"></div>
+    <div class="boks"></div>
+    <div class="boks"></div>
+    <div class="boks"></div>
+    <div class="boks"></div>
+
+
+    <script>
+        let bokse = document.querySelectorAll(".boks");
+
+        //console.log(valgte[9]);
+        bokse.forEach(elm => {
+
+            elm.style.background = "#f00";
+
+            elm.addEventListener("click", () => {
+                elm.style.background = "#123456";
+            })
+        })
+
+        function skiftFarve() {
+            this.style.background = "#123456";
+        }
+    </script>
+</body>
+</html>
