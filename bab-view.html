@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches|Lato:400,700|Montserrat:400,500,700|Roboto:400,500" rel="stylesheet">
+    <title>Singleview</title>
+    <style>
+        *,
+        body * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-height: 400px;
+        }
+
+        .ret {
+            background-color: white;
+            border: 1px solid black;
+            max-width: 1200px;
+
+        }
+
+        .ret p {
+            font-family: 'Staatliches', cursive;
+            font-size: 1.2em
+        }
+
+        h2 {
+            font-family: 'Staatliches', cursive;
+
+
+
+            font-size: 2.3em;
+        }
+
+        h1 {
+            font-family: 'Staatliches', cursive;
+            color: #E2474B;
+            font-size: 2.5em;
+        }
+
+
+        @media only screen and (min-width:868px) {
+
+            body {
+                margin-left: 15vw;
+                margin-right: 15vw;
+            }
+        }
+
+        #single {
+            background-color: #E2474B;
+        }
+
+        #single button {
+            background-color: #E2474B;
+
+
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+
+        #indhold {
+            min-height: 50vh;
+            background-color: white;
+            width: 70vw;
+            margin: 4rem auto;
+        }
+
+        #tilbage {}
+
+        #tilbage button {
+            font-size: 2rem;
+            padding: 1rem 2rem;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <main id="single">
+        <div id="tilbage">
+            <button>Return</button>
+        </div>
+        <section id="indhold"></section>
+    </main>
+
+
+
+
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let navn = urlParams.get("navn");
+        console.log(navn);
+
+        document.querySelector("#tilbage button").addEventListener("click", () => {
+            location.href = "babushka2SingleView.html"
+        })
+        let alleRetter = [];
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        function start() {
+
+            async function hentJson() {
+                const myJson = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1jxxxFoWBuMJ1qhQ9BQIAyKHmP38XtAF9_sQr0xo5JLo");
+                alleRetter = await myJson.json();
+                alleRetter.sort((a, b) => {
+                    return (b.alder - a.alder);
+                });
+                visRetter();
+            }
+
+
+            function visRetter() {
+                let dest = document.querySelector("#indhold");
+                dest.innerHTML = "";
+                alleRetter.forEach(retter => {
+                    if (navn == retter.navn) {
+                        let template = `
+<article class="ret">
+<img src="imgs/small/${retter.billede}-sm.jpg">
+<h1> ${retter.navn}</h1>
+<p> ${retter.kort}</p>
+<h2> ${retter.pris},-</h2>
+</article>`;
+                        dest.insertAdjacentHTML("beforeend", template);
+                    }
+                })
+            }
+
+            hentJson();
+        }
+
+        function visSingle(retter) {
+            document.querySelector("#indhold").innerHTML = `
+<article class="ret">
+<img src="imgs/small/${retter.billede}-sm.jpg">
+<h1> ${retter.navn}</h1>
+<p> ${retter.kort}</p>
+<h2> ${retter.pris},-</h2>
+</article>`;
+
+            document.querySelector("#single").style.display = "block";
+        }
+
+    </script>
+</body>
+
+</html>
