@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colos</title>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches|Lato:400,700|Montserrat:400,500,700|Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        | body .logo {
+            max-height: 280px;
+        }
+
+        img {
+            max-height: 220px;
+        }
+
+        .footer {
+            height: 100px;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #BD4D4A;
+            color: #F2F0DE;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .footer p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3vw;
+
+        }
+
+        .ret {
+            margin-bottom: 5px;
+        }
+
+        .ret img {
+
+            max-width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition: transform .5s;
+
+        }
+
+        .ret img:hover {
+            -ms-transform: scale(1.1);
+            /* IE 9 */
+            -webkit-transform: scale(1.1);
+            /* Safari 3-8 */
+            transform: scale(1.1);
+        }
+
+
+        .ret p {
+            font-family: 'Staatliches', cursive;
+            font-size: 1.2em
+        }
+
+        #liste {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            text-align: center;
+            margin: 1rem;
+            grid-gap: 2rem;
+        }
+
+        @media only screen and (min-width:374px) {
+
+            body #splash img {
+                max-height: 163px;
+
+            }
+
+            body .menu img {
+                max-height: 100px;
+            }
+
+            body .bestil {
+                background-color: #BD4D4A;
+                border-radius: 8px;
+                border: none;
+                color: white;
+                padding: 7px 14px;
+                text-align: center;
+                font-size: 8px;
+                margin: 15px 2px;
+                display: inline-block;
+                text-decoration: none;
+                cursor: pointer;
+                float: right;
+                position: absolute;
+                left: 75%;
+                top: 10px;
+
+            }
+
+
+
+            body .fa {
+                padding: 12px;
+                font-size: 10px;
+                width: 12px;
+                text-align: center;
+                text-decoration: none;
+                margin: 5px 12px;
+                border-radius: 50%;
+                float: left;
+                position: absolute;
+                top: 10px;
+            }
+
+            body .fa-youtube {
+                top: 60px;
+                left: 10px;
+            }
+
+            body .fa-instagram {
+                top: 105px;
+
+                left: 10px;
+
+            }
+
+            body .pastashadow {
+                display: none;
+            }
+
+            body .pizzashadow {
+                display: none;
+            }
+
+            body .drikkeshadow {
+                display: none;
+            }
+
+            body .forretshadow {
+                display: none;
+            }
+
+            body .forret {
+                margin-left: 50p;
+            }
+
+        }
+
+        @media only screen and (max-width:376px) {
+            h2 {
+                font-family: 'Staatliches', cursive;
+
+
+
+                font-size: 2.3em;
+            }
+
+            h1 {
+                font-family: 'Staatliches', cursive;
+                color: #E2474B;
+                font-size: 2.5em;
+            }
+
+            body #splash img {
+                max-height: 163px;
+                margin-left: 100px;
+            }
+
+            body .menu img {
+                max-height: 130px;
+            }
+
+            body .ret img {
+                max-height: 150px;
+            }
+
+            .footer {
+                height: 100px;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #BD4D4A;
+                color: #F2F0DE;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .footer p {
+                font-family: 'Montserrat', sans-serif;
+
+
+            }
+
+            .kontakt {
+                position: relative;
+                width: 33.33333%;
+                float: left;
+                margin-right: 50px;
+
+            }
+
+
+
+
+
+            body .bestil {
+                background-color: #BD4D4A;
+                border-radius: 8px;
+                border: none;
+                color: white;
+                padding: 7px 14px;
+                text-align: center;
+                font-size: 8px;
+                margin: 15px 2px;
+                display: inline-block;
+                text-decoration: none;
+                cursor: pointer;
+                float: right;
+                position: absolute;
+                left: 75%;
+                top: 10px;
+
+            }
+
+
+
+            body .fa {
+
+                padding: 12px;
+                font-size: 10px;
+                width: 12px;
+                text-align: center;
+                text-decoration: none;
+                margin: 5px 12px;
+                border-radius: 50%;
+                float: left;
+                position: absolute;
+
+            }
+
+            body .fa-facebook {
+                background: white;
+                color: #668C51;
+                border: solid #668C51;
+                margin-right: 20px;
+            }
+
+            body .fa-youtube {
+                background: #F2F0DE;
+                color: black;
+
+                margin-right: 20px;
+                top: 60px;
+                left: 10px;
+
+            }
+
+            .fa-instagram {
+                background: #BD4D4A;
+                color: white;
+                top: 105px;
+
+                left: 10px;
+            }
+
+
+
+
+            body .pastashadow {
+                display: none;
+            }
+
+            body .pizzashadow {
+                display: none;
+            }
+
+            body .drikkeshadow {
+                display: none;
+            }
+
+            body .forretshadow {
+                display: none;
+            }
+
+            body .forret {
+                margin-left: 20px;
+            }
+
+            body .pasta {
+                position: absolute;
+                left: 220px;
+                top: 180px;
+            }
+
+            body .pizza {
+                position: absolute;
+                top: 330px;
+                left: 60px;
+
+            }
+
+            body .drik {
+                position: relative;
+                top: 25px;
+                left: 195px;
+            }
+
+            body .drikmenu {
+                margin-bottom: 80px;
+            }
+        }
+
+        @media only screen and (min-width:400px) {
+
+            body #splash img {
+                max-height: 300px;
+
+            }
+
+            body .menu img {
+                max-height: 280px;
+            }
+
+            body .bestil {
+                background-color: #BD4D4A;
+                border-radius: 25px;
+                border: none;
+                color: white;
+                padding: 10px 25px;
+                text-align: center;
+                font-size: 16px;
+                margin: 15px 2px;
+                display: inline-block;
+                text-decoration: none;
+                cursor: pointer;
+                float: right;
+                position: absolute;
+                left: 77%;
+                top: 10px;
+
+            }
+
+
+
+            body .fa {
+                padding: 20px;
+                font-size: 30px;
+                width: 30px;
+                text-align: center;
+                text-decoration: none;
+                margin: 5px 12px;
+                border-radius: 50%;
+                float: left;
+                position: absolute;
+                top: 10px;
+            }
+
+            body .fa-youtube {
+                top: 15px;
+                left: 130px;
+            }
+
+            body .fa-instagram {
+
+                top: 15px;
+                left: 250px;
+
+            }
+
+
+            /*
+            body .container {
+                display: inline-block;
+                cursor: pointer;
+                float: right;
+                padding: 10px 25px;
+                top: 70px;
+                right: 3%;
+                position: absolute;
+            }
+
+            body .bar1 {
+                width: 35px;
+                height: 5px;
+                background-color: #3E5731;
+                border: solid 1px black;
+                border-radius: 5px;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+
+            body .bar2 {
+                width: 35px;
+                height: 5px;
+                background-color: #F2F0DE;
+                border: solid 1px black;
+                border-radius: 5px;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+
+            body .bar3 {
+                width: 35px;
+                height: 5px;
+                background-color: #A33433;
+                border: solid 1px black;
+                border-radius: 5px;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+
+            body .change .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+                transform: rotate(-45deg) translate(-9px, 6px);
+            }
+
+            body .change .bar2 {
+                opacity: 0;
+            }
+
+            body .change .bar3 {
+                -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                transform: rotate(45deg) translate(-11px, -10px);
+            }
+
+
+        }
+*/
+
+            @media only screen and (min-width:600px) {
+                #liste {
+                    grid-template-columns: repeat(2, 1fr);
+
+
+                }
+
+
+
+
+            }
+
+            @media only screen and (min-width:868px) {
+                #liste {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            .menu {
+                margin-left: 70px;
+                margin-bottom: 100px;
+            }
+
+            .menu img {
+                max-height: 300px;
+            }
+
+            h2 {
+                font-family: 'Staatliches', cursive;
+
+
+
+                font-size: 2.3em;
+            }
+
+            h1 {
+                font-family: 'Staatliches', cursive;
+                color: #E2474B;
+                font-size: 2.5em;
+            }
+
+
+
+
+
+
+
+            .forretmenu {
+
+                position: relative;
+                display: inline-block;
+                left: 15px;
+            }
+
+            .forretmenu .forretshadow {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0px;
+
+
+
+
+            }
+
+            .forretmenu:hover .forretshadow {
+                display: inline;
+
+            }
+
+            .pastamenu {
+                position: relative;
+                display: inline-block;
+                left: 50px;
+            }
+
+            .pastamenu .pastashadow {
+                display: none;
+                position: absolute;
+                top: 0;
+
+                left: 0;
+            }
+
+            .pastamenu:hover .pastashadow {
+                display: inline;
+
+            }
+
+            .pizzamenu {
+                position: relative;
+                display: inline-block;
+                left: 120px;
+            }
+
+            .pizzamenu .pizzashadow {
+                display: none;
+                position: absolute;
+                top: 0;
+
+                left: 0;
+            }
+
+            .pizzamenu:hover .pizzashadow {
+                display: inline;
+
+            }
+
+
+            .drikmenu {
+                position: relative;
+                display: inline-block;
+                left: 190px;
+            }
+
+            .drikmenu .drikkeshadow {
+                display: none;
+                position: absolute;
+                top: 0;
+
+                left: 0;
+            }
+
+            .drikmenu:hover .drikkeshadow {
+                display: inline;
+
+            }
+
+
+            #splash {
+                text-align: center;
+                margin-bottom: 20px;
+                margin-top: 15px;
+
+
+
+
+
+
+
+            }
+
+            @media only screen and (max-width:1500px) {
+
+
+
+                body .menu {
+                    margin-left: 20px;
+                }
+
+                body .menu img {
+                    max-height: 270px;
+                }
+
+
+
+                body .ret img {
+                    max-height: 230px;
+                }
+
+            }
+
+
+
+            @media only screen and (max-width:1320px) {
+
+
+
+
+
+
+                body .menu img {
+                    max-height: 240px;
+                }
+            }
+
+            @media only screen and (max-width:1200px) {
+
+
+                body .fa {
+                    padding: 25px;
+                    font-size: 20px;
+                    width: 20px;
+
+                }
+
+
+                body .menu img {
+                    max-height: 220px;
+                }
+            }
+
+            @media only screen and (max-width:1290px) {
+
+
+
+
+                body .ret img {
+                    max-height: 200px;
+                }
+            }
+
+            @media only screen and (max-width:1200px) {
+
+
+
+
+                body .ret img {
+                    max-height: 160px;
+                }
+            }
+
+            @media only screen and (max-width:1100px) {
+
+
+
+                body .fa {
+                    padding: 20px;
+                    font-size: 15px;
+                    width: 15px;
+
+                }
+
+                body .fa-youtube {
+                    left: 80px;
+                }
+
+                body .fa-instagram {
+                    left: 150px;
+                }
+
+                body .menu {
+                    margin-left: 0;
+                }
+            }
+
+            @media only screen and (max-width:1060px) {
+
+
+
+                body .menu img {
+                    max-height: 195px;
+                }
+
+                body .ret img {
+                    max-height: 150px;
+                }
+            }
+
+            @media only screen and (max-width:965px) {
+
+
+
+
+                body .menu img {
+                    max-height: 180px;
+                }
+
+                body .ret img {
+                    max-height: 140px;
+                }
+            }
+
+            @media only screen and (max-width:910px) {
+
+
+
+                body .menu img {
+                    max-height: 140px;
+
+                }
+
+                body .ret img {
+                    max-height: 130px;
+                }
+            }
+
+            @media only screen and (max-width:775px) {
+
+
+
+                body .menu img {
+                    max-height: 120px;
+                }
+
+                body .pasta {
+                    margin-right: 20px;
+                }
+
+            }
+
+            @media only screen and (max-width:670px) {
+
+                body #splash img {
+                    max-height: 200px;
+                }
+
+                body .menu img {
+                    max-height: 100px;
+                }
+
+                body .fa {
+                    padding: 10px;
+                    font-size: 10px;
+                    width: 10px;
+
+                }
+
+                body .fa-youtube {
+                    left: 60px;
+                }
+
+                body .fa-instagram {
+                    left: 105px;
+                }
+            }
+
+            @media only screen and (max-width:375px) {
+
+
+
+
+                body .menu img {
+                    max-height: 90px;
+
+                }
+
+                body .forret {
+                    position: relative;
+                    right: 10%
+                }
+
+                body .pizza {
+                    position: relative;
+                    right: 70%;
+                }
+
+                body .drik {
+                    position: relative;
+                    right: 75%;
+                }
+
+                body .pasta {
+                    position: relative;
+                    right: 33%;
+                }
+
+                .forretmenu:hover .forretshadow {
+                    display: none;
+
+                }
+
+                .pastamenu:hover .pastashadow {
+                    display: none;
+
+                }
+
+                .pizzamenu:hover .pizzashadow {
+                    display: none;
+
+                }
+
+                .drikmenu:hover .drikkeshadow {
+                    display: none;
+
+                }
+
+            }
+
+
+
+            .fa {
+                padding: 20px;
+                font-size: 30px;
+                width: 30px;
+                text-align: center;
+                text-decoration: none;
+
+                border-radius: 50%;
+                float: left;
+
+
+                top: 30px;
+
+
+            }
+
+            .fa:hover {
+                opacity: 0.7;
+            }
+
+            .fa-facebook {
+                background: white;
+                color: #668C51;
+                border: solid #668C51;
+                margin-right: 20px;
+            }
+
+            .fa-youtube {
+                background: #F2F0DE;
+                color: black;
+
+                margin-right: 20px;
+
+
+            }
+
+            .fa-instagram {
+                background: #BD4D4A;
+                color: white;
+
+
+            }
+
+            .bestil {
+                background-color: #BD4D4A;
+                border-radius: 25px;
+                border: none;
+                color: white;
+                padding: 16px 32px;
+
+                font-size: 16px;
+                margin: 15px 2px;
+                display: inline-block;
+                text-decoration: none;
+                cursor: pointer;
+                float: right;
+
+
+                top: 30px;
+
+            }
+
+            .bestil:hover {
+                box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            /*
+        .container {
+            display: inline-block;
+            cursor: pointer;
+            float: right;
+            padding: 10px 25px;
+            top: 130px;
+            right: 4%;
+
+            position: absolute;
+        }
+
+        .bar1 {
+            width: 70px;
+            height: 10px;
+            background-color: #3E5731;
+            border: solid 1px black;
+            border-radius: 5px;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .bar2 {
+            width: 70px;
+            height: 10px;
+            background-color: #F2F0DE;
+            border: solid 1px black;
+            border-radius: 5px;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .bar3 {
+            width: 70px;
+            height: 10px;
+            background-color: #A33433;
+            border: solid 1px black;
+            border-radius: 5px;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-18px, -16px);
+        }
+*/
+            .footer {
+                height: 100px;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #BD4D4A;
+                color: #F2F0DE;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .footer p {
+                font-family: 'Montserrat', sans-serif;
+
+
+            }
+
+            .kontakt {
+                position: relative;
+                width: 33.33333%;
+                float: left;
+                margin-right: 50px;
+
+            }
+
+            .kontakt p {
+                font-size: 2vw;
+                margin-right: 50px;
+
+            }
+
+            .adresse {
+                position: relative;
+                float: left;
+                width: 33.333333%;
+            }
+
+            .adresse p {
+                font-size: 2vw;
+            }
+    </style>
+</head>
+
+<body>
+
+
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <a href="#" class="fa fa-instagram"></a>
+
+    <div> <button class="bestil">Bestil Online</button></div>
+
+    <div id="splash">
+        <img src="imgs/splash/whitebackcolos.png" alt="logo" class="filter logo" data-kategori="alle">
+    </div>
+
+    <!--
+    <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+-->
+    <div class="menu">
+
+        <div class="forretmenu"><img src="imgs/splash/almforretter.png" alt="forretbutton" class="filter forret" data-kategori="forretter">
+            <img src="imgs/splash/forrettermenu.png" alt="forretshadow" class="filter forretshadow" data-kategori="forretter"></div>
+
+        <div class="pastamenu">
+            <img src="imgs/splash/pasta.png" alt="pastabutton" class="filter pasta" data-kategori="pasta">
+            <img src="imgs/splash/pastashadow.png" alt="pastashadow" class="filter pastashadow" data-kategori="pasta"></div>
+
+        <div class="pizzamenu"><img src="imgs/splash/almpizza.png" alt="pizzabutton" class="filter pizza" data-kategori="pizza">
+            <img src="imgs/splash/pizzashadow.png" alt="pizzabutton" class="filter pizzashadow" data-kategori="pizza">
+        </div>
+
+        <div class="drikmenu"><img src="imgs/splash/almdrikke.png" alt="drikkebutton" class="filter drik" data-kategori="drikkevarer">
+            <img src="imgs/splash/drikkeshadow.png" alt="drikbutton" class="filter drikkeshadow" data-kategori="drikkevarer">
+        </div>
+
+    </div>
+
+
+    <div id="liste"></div>
+
+    <div class="footer">
+        <div class="kontakt">
+            <p>Colos kan kontaktes på <br>tlf: 31 12 31 86</p>
+        </div>
+
+        <div class="adresse">
+            <p>
+                Piazza del Colosseo <br> Rome
+            </p>
+        </div>
+
+
+    </div>
+
+
+    <script>
+        //        function myFunction(x) {
+        //            x.classList.toggle("change");
+        //        }
+        let alleRetter = [];
+        let filter = "alle";
+
+        document.addEventListener("DOMContentLoaded", start);
+        console.log(start);
+
+        function start() {
+            let dest = document.querySelector("#liste");
+            async function hentJson() {
+                const myJson = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1Sc1UaU734dw0FWUspcVdM6-UnCuAHtx9uylFKCPYZ4U");
+                alleRetter = await myJson.json();
+                alleRetter.sort((a, b) => {
+                    return (b.pris - a.pris);
+                });
+                visRetter();
+            }
+
+            function visRetter() {
+                dest.innerHTML = "";
+                alleRetter.forEach(retter => {
+                    if (filter == "alle" || filter == retter.kategori) {
+                        let template = `
+<div class="ret">
+
+<img src="imgs/large/${retter.billede}.jpg">
+<h1> ${retter.navn}</h1>
+<p> ${retter.kort}</p>
+<h2> ${retter.pris},-</h2>
+
+
+
+</div>`;
+                        dest.insertAdjacentHTML("beforeend", template);
+                        dest.lastElementChild.addEventListener("click", () => {
+                            location.href = "colossview.html?navn=" + retter.navn;
+                        });
+                    }
+                })
+            }
+            hentJson();
+            document.querySelectorAll(".filter").forEach(but => {
+                but.addEventListener("click", filtrering);
+            })
+
+            function filtrering() {
+                document.querySelector("h1").textContent = this.textContent;
+                filter = this.getAttribute("data-kategori");
+                console.log(filter);
+                visRetter();
+                document.querySelectorAll(".filter").forEach(but => {
+                    but.classList.remove("valgt");
+                });
+                this.classList.add("valgt");
+            }
+        }
+    </script>
+</body>
+
+</html>
